@@ -1,0 +1,46 @@
+log_dir: twophase_experiments_stage2/twopahse_stage2_varying_freq_cond
+overwrite_exist: True
+device: cuda:0
+project_name: lnpde-twopahse-stage2-cond
+
+latent_dim: 64     # Latent dimension n_z (default: 4)
+Ly: 61
+Lx: 121
+resolutions: [61, 121]
+in_channels: 4    # voriticity
+latent_resolution: 7
+is_periodic: False
+hw_ratio: 2
+
+encoder_channels: [64, 64, 64, 128, 128]  # compression ratio: 16
+fourier_resolutions: []  # truncate high-frequency components
+encoder_res_blocks: 1
+cond_channels: 1
+cond_emb_channels: 64
+
+use_fa: True
+decoder_channels: [128, 128, 64, 64]
+attn_resolutions: [15, 30]
+decoder_res_blocks: 1
+final_smoothing: False
+decoder_attn_heads: 8
+decoder_attn_dim: 64
+
+pretrained_checkpoint_path: twophase_experiments_stage1/twopahse_stage1_varying_frequency/checkpoints/vqgan_epoch_final.pt
+
+# option for latent resnet
+prop_n_block: 4
+prop_n_embd: 128
+dilation: 2
+
+data_dir: /home/cmu-mail-3090/Zijie_2/pde_data/processed_tank_sloshing_data_varying_freq
+case_len: 79
+dataset_stat: twophase_stat_varying_freq.npz
+num_case: 248
+in_tw: 1
+out_tw: 5
+
+batch_size: 32
+epochs: 500
+learning_rate: 5.e-4
+ckpt_every: 100

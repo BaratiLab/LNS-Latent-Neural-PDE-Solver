@@ -1,0 +1,39 @@
+log_dir: experiments_test/ns2d_re200_stage1_test
+overwrite_exist: True
+device: cuda:0
+project_name: lnpde-ns2d-stage1
+
+latent_dim: 16     # Latent dimension n_z (default: 4)
+Ly: 64
+Lx: 64
+resolution: 64
+in_channels: 1    # voriticity
+latent_resolution: 8
+is_periodic: True
+
+encoder_channels: [64, 64, 64, 128, 128]  # compression ratio: 16
+fourier_resolutions: []  # truncate high-frequency components
+encoder_res_blocks: 1
+use_attn_enc: False
+
+use_fa: True
+decoder_channels: [128, 128, 64, 64]
+attn_resolutions: [16, 32]
+decoder_res_blocks: 1
+final_smoothing: False
+attn_heads: 8
+attn_dim: 64
+disable_coarse_attn: False
+
+data_dir: /home/cmu-mail-3090/Zijie/pde_data/ns2d_1e-4_solution_N5000.npz
+case_len: 30
+dataset_stat: ns2d_re200_stat_new.npz
+num_case: 1000
+
+batch_size: 32
+epochs: 500
+learning_rate: 3.e-5
+beta1: 0.5
+beta2: 0.9
+physics_factor: -1 #  0.5
+ckpt_every: 50
