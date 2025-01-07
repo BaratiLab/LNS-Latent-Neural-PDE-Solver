@@ -1,4 +1,4 @@
-log_dir: experiments_dummy/twopahse_stage1_varying_frequency-just-testing
+log_dir: experiments_dummy/twopahse_stage1_varying_frequency
 overwrite_exist: True
 device: cuda:0
 project_name: lnpde-twopahse-stage1

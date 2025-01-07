@@ -1,5 +1,5 @@
-# log_dir: twophase_experiments_stage2/simple_twopahse_stage2_tw5_4layer
-log_dir: twophase_experiments_stage2/test
+
+log_dir: twophase_experiments_stage2/varying_height
 overwrite_exist: True
 device: cuda:0
 project_name: lnpde-twopahse-stage2
@@ -33,7 +33,7 @@ prop_n_block: 4
 prop_n_embd: 128
 dilation: 2
 
-data_dir: /home/cmu-mail-3090/Zijie_2/pde_data/processed_tank_sloshing_data
+data_dir: /home/cmu-mail-3090/Zijie_2/pde_data/processed_tank_sloshing_data_varying_height
 case_len: 79
 dataset_stat: twophase_stat_varying_height.npz
 num_case: 180

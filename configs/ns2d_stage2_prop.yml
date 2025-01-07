@@ -1,4 +1,4 @@
-log_dir: experiments_test/ns2d_re200_stage2_test
+log_dir: experiments_ns2d/ns2d_re200_stage2
 overwrite_exist: True
 device: cuda:0
 project_name: latent-pde-ns2d-stage2
@@ -12,7 +12,7 @@ in_channels: 1    # voriticity
 latent_resolution: 8
 is_periodic: True
 
-encoder_channels: [64, 64, 64, 128, 128]  # compression ratio: 16
+encoder_channels: [64, 64, 64, 128, 128]
 fourier_resolutions: []  # truncate high-frequency components
 encoder_res_blocks: 1
 use_attn_enc: False
@@ -27,10 +27,7 @@ attn_dim: 64
 disable_coarse_attn: False
 noise_level: 0.
 
-pretrained_checkpoint_path: /home/cmu-mail-3090/Zijie_2/latent-pde-solver/experiments_test/ns2d_re200_stage1_test/checkpoints/vqgan_epoch_0.pt
-# useless for stage2
-temporal_aware: False
-# propagator_dim: 64
+pretrained_checkpoint_path: /home/cmu-mail-3090/Zijie_2/latent-pde-solver/experiments_ns2d/ns2d_re200_stage1/checkpoints/vqgan_epoch_500.pt
 
 # option for latent resnet
 prop_n_block: 3

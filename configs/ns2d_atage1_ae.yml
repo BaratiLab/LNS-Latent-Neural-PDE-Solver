@@ -1,4 +1,4 @@
-log_dir: experiments_test/ns2d_re200_stage1_test
+log_dir: experiments_ns2d/ns2d_re200_stage1
 overwrite_exist: True
 device: cuda:0
 project_name: lnpde-ns2d-stage1
