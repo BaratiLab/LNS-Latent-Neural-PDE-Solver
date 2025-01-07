@@ -27,7 +27,7 @@ attn_dim: 64
 disable_coarse_attn: False
 noise_level: 0.
 
-pretrained_checkpoint_path: /home/cmu-mail-3090/Zijie_2/latent-pde-solver/experiments_ns2d/ns2d_re200_stage1/checkpoints/vqgan_epoch_500.pt
+pretrained_checkpoint_path: /home/cmu-mail-3090/Zijie_2/latent-pde-solver/experiments_ns2d/ns2d_re200_stage1/checkpoints/vqgan_epoch_final.pt
 
 # option for latent resnet
 prop_n_block: 3

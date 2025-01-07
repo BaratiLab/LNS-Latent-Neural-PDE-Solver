@@ -26,7 +26,7 @@ final_smoothing: False
 decoder_attn_heads: 8
 decoder_attn_dim: 64
 
-pretrained_checkpoint_path: twophase_experiments_stage1/twopahse_stage1_varying_frequency/checkpoints/vqgan_epoch_final.pt
+pretrained_checkpoint_path: experiments_twophase/twopahse_stage1_varying_frequency/checkpoints/vqgan_epoch_final.pt
 
 # option for latent resnet
 prop_n_block: 4
